@@ -18,3 +18,27 @@ body{
 	width: 265px;
 	line-height: 3em;
 }
+
+
+#logo > img{
+	width:150px;
+}
+
+#logo {
+	padding:10%;
+
+}
+
+.buttonOne{
+	width: 270px;
+	height: 40px;
+	color:white;
+}
+
+#logIn{
+	background-color: #14937d;
+}
+
+#fbLogin{
+	background-color: #3a5795;
+}
