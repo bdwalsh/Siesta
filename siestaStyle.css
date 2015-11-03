@@ -4,6 +4,7 @@ body{
 	background-color: rgba(124,194,180,1.00);
 	width: 100vw;
 	height: 100vh;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 #loginContainer{
@@ -42,3 +43,44 @@ body{
 #fbLogin{
 	background-color: #3a5795;
 }
+
+.links{
+	color:white;
+	padding:20px;
+
+}
+
+/*--------------------SignUP-------------------*/
+
+.signInput {
+	display: list-item;
+	margin-left: auto;
+	margin-right: auto;
+	width: 265px;
+	line-height: 3em;
+	margin-top: 20px;
+}
+
+.radButtons {
+	margin-bottom: 30px;
+}
+
+#form{
+	text-align: center;
+}
+
+#title{
+	text-align: center;
+	color: white;
+}
+
+#back {
+	color: white;
+	font-size: 20pt;
+}
+
+#signContainer{
+	text-align:center;
+	color: #FFFFFF;
+}
+
