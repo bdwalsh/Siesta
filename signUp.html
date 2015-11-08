@@ -4,12 +4,42 @@
 <title>Sign-up</title>
 <link href="siestaStyle.css" rel="stylesheet" type="text/css">
 </head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
 
+  $(document).ready(function()
+  {
+     
+
+     $("#logIn").click(function()
+     {
+
+     var pass = $("#PassWord").val();
+     var username = $("#displayName").val();
+     var email = $("#email").val();
+     var campus = $("input[name=campus]:checked").val();
+
+      console.log("hello");
+      console.log(email);
+      console.log(campus);
+         var request = $.ajax(
+         {
+         	//siestabcit.com/signup.php
+             url:"signup.php",
+             type:"POST",
+             data:{password:pass, username:username, email:email, campus:campus}
+       
+         });
+   });        
+});
+
+</script>
 <body>
+
 <div id="signContainer">
 <h3 id="title">Sign-Up</h3>
-<form action="" id="form">
-<input class="signInput" id="displayName" name="email" placeholder="Choose a Display Name"/>
+<form action="signup.php" id="form">
+<input class="signInput" id="displayName" name="displayname" placeholder="Choose a Display Name"/>
 <input class="signInput" id="PassWord" name="PassWord" placeholder="Enter Password"/>
 <input class="signInput" id="confirm" name="confirm" placeholder="Confirm Password"/>
 <input class="signInput" id="email" name="email" placeholder="Enter Email"/><br>
