@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/* CSS Document */
+#loginContainer{
+	text-align:center;
+	color: #FFFFFF;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#logo > img{
+	width: 360px;
+}
+
+/*#logo {
+	padding:10%;
+
+}
+*/
+
+#fbLogin{
+	background-color: #3a5795;
+	margin-top: 0px;
+}
+
+.links{
+	color:white;
+	padding:20px;
+
+}

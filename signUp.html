@@ -2,53 +2,28 @@
 <html>
 <head>
 <title>Sign-up</title>
-<link href="siestaStyle.css" rel="stylesheet" type="text/css">
+<link href="signUp.css" rel="stylesheet" type="text/css">
+<link href="siestaMain.css" rel="stylesheet" type="text/css">
+<script src="jquery-2.1.4.js"></script>
+<script src="signUp.js"></script>
 </head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script>
 
-  $(document).ready(function()
-  {
-     
-
-     $("#logIn").click(function()
-     {
-
-     var pass = $("#PassWord").val();
-     var username = $("#displayName").val();
-     var email = $("#email").val();
-     var campus = $("input[name=campus]:checked").val();
-
-      console.log("hello");
-      console.log(email);
-      console.log(campus);
-         var request = $.ajax(
-         {
-         	//siestabcit.com/signup.php
-             url:"signup.php",
-             type:"POST",
-             data:{password:pass, username:username, email:email, campus:campus}
-       
-         });
-   });        
-});
-
-</script>
 <body>
-
 <div id="signContainer">
-<h3 id="title">Sign-Up</h3>
-<form action="signup.php" id="form">
-<input class="signInput" id="displayName" name="displayname" placeholder="Choose a Display Name"/>
-<input class="signInput" id="PassWord" name="PassWord" placeholder="Enter Password"/>
-<input class="signInput" id="confirm" name="confirm" placeholder="Confirm Password"/>
-<input class="signInput" id="email" name="email" placeholder="Enter Email"/><br>
-<h3 id="title">Choose Campus</h3>
-<input class="radButtons" type="radio" name="campus" value="Burnaby">Burnaby
-<input class="radButtons" type="radio" name="campus" value="Aerospace">AeroSpace
-<input class="radButtons" type="radio" name="campus" value="Tsawassen">Tsawassen<br>
-<button class="buttonOne" id="logIn">Sign-Up</button>
-</form>
+<h3 class="title">Sign-Up</h3>
+<input class="infoInput" id="displayName" name="email" placeholder="Choose a Display Name"/>
+<input class="infoInput" id="PassWord" type="password" name="PassWord" placeholder="Enter Password"/>
+<input class="infoInput" id="confirm" type="password" name="confirm" placeholder="Confirm Password"/>
+<input class="infoInput" id="email" name="email" placeholder="Enter Email"/><br>
+<h3 class="title">Choose Campus</h3>
+<select class="infoInput" id="campus">
+<option class="radButtons" type="" name="campus" value="Burnaby">Burnaby</option>
+<option class="radButtons" type="radio" name="campus" value="Aerospace">AeroSpace</option>
+<option class="radButtons" type="radio" name="campus" value="Tsawassen">Tsawassen</option>
+</select><br>
+<button class="buttonOne" id="signUp">Sign-Up</button>
+
+
 </div>
 </body>
 </html>

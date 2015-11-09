@@ -1,0 +1,62 @@
+@charset "UTF-8";
+/* CSS Document */
+* {
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   /* The CSS */
+   text-align: center;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    background: #3C8CC8;
+    color:white;
+    border:none;
+    outline:none;
+    display: inline-block;
+	font-size: 1em;
+   
+}
+
+body{
+	background-color: rgba(124,194,180,1.00);
+	width: 100vw;
+	height: 100vh;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.infoInput {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 265px;
+	height: 48px;
+	margin-top: 20px;
+}
+
+p.infoInput {
+	line-height: 48px;
+}
+
+
+.buttonOne{
+	margin-top: 20px;
+	width: 270px;
+	height: 40px;
+	color:white;
+	background-color: #14937d;
+}
+
+
+
+
