@@ -67,4 +67,19 @@ window.onload = function(){
 		
 		
 	};
+
+	     function check(input) {
+
+          if(input.validity.patternMismatch) {
+              input.setCustomValidity("User name must be more than 2 alphabetic characters and less than 20 alphabetic characters.");
+
+          } else if(input.validity.valueMissing) {
+              input.setCustomValidity("You must enter a name!");
+
+          } else {
+              input.setCustomValidity("");
+
+          }
+
+      }
 };
