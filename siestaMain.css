@@ -56,6 +56,14 @@ p.infoInput {
 	color:white;
 	background-color: #14937d;
 }
+#header {
+	height: 25px;
+	background-color: #14937f; 
+	text-align: center;
+	color: white;
+	margin-left:-10px;
+	margin-top: -15px;
+}
 
 
 
