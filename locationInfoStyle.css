@@ -1,0 +1,135 @@
+@charset "UTF-8";
+/* CSS Document */
+/*colors
+#14937f
+#dcebe8
+#4199b6
+*/
+body {
+	background-color: #dcebe8;
+	overflow: hidden;
+}
+#content{
+	margin-left:-10px;
+}
+#header {
+	height: 25px;
+	background-color: #14937f; 
+	text-align: center;
+	color: white;
+	margin-left:-10px;
+	margin-top: -15px;
+}
+/*Image and Info*/
+#locImg {
+	width:100vw;
+	height: 40vh;
+
+}
+
+#imgContainer{
+	height: 40vh;
+	position: relative;
+}
+
+#rating {
+	position: absolute;
+	top:0;
+	width: 100vw;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+#place {
+	position: absolute;
+	bottom:0;
+	width: 100vw;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.infoLeft{
+	font-size: 10pt;
+    float: left;
+    padding-left: 10px;
+    clear: both;
+}
+
+.infoRight{
+	position: absolute;
+	font-size: 10pt;
+	right: 0;
+	margin-right: 10px;
+	/*float: right;
+	padding-left: 80vw;
+	clear: both;
+	margin-top:-17px;*/
+}
+
+/*Poster and Description*/
+
+.pics{
+	width:40px;
+	height: 40px;
+	border: 2px solid #14937f;
+	float: left;
+}
+#profPic{
+	margin-top: 5px;
+	margin-left: 15px;
+	
+}
+#userPic{
+	margin-top: -5px;
+	margin-left: 15px;
+	float: left;
+}
+
+#posterName {
+   margin-left: 70px; 
+   margin-top: 5px;
+   padding-bottom: 8px;
+}
+
+#date {
+	padding-left: 70px;
+	margin-top: -30px;
+	font-size: 10pt;
+	width:100vw;
+	background-color: #acdad3; 
+}
+
+#description {
+	margin-top: 20px;
+	padding-left: 15px;
+	background-color: #acdad3;
+	font-size: 10pt;
+	padding-right: 30px;
+}
+
+
+/*comments and buttons*/
+#commentInput {
+	width:70%;
+	height: 45px; 
+	margin-left: 5px;
+	margin-top: -4px;
+}
+.buttons{
+	width:100%;
+	height: 40px;
+	color: white; 
+}
+#postBut{
+	margin-top: 10px;
+	background-color: #14937f;	
+}
+
+#showCommentsBut{
+	background-color: #4199b6;
+}
+
+
+
