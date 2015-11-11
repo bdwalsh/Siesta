@@ -5,20 +5,68 @@
 <title>Map</title>
 <link href="siestaMain.css" rel="stylesheet" type="text/css">
 <style>
+	#FooterDiv {
+		
+	}
+	
 	#PostFooter {
+		left:0;
 		position:absolute;
 		bottom:0;
 		width:100vw;
-		height:25px;
+		height:75px;
 		}
+		
+	#MostPopularButton {
+		margin-left:38px;
+		left:0;
+		position:absolute;
+		bottom:0;
+		margin-bottom:8px;
+		width:35px;
+		height:35px;
+		}
+		
+	#PostButton {
+		position:absolute;
+		display:block;
+		left:50%;
+		margin-left:-29.5px;
+		bottom:0;
+		margin-bottom:8px;
+		width:55px;
+		height:55px;
+		}
+		
+	#UserProfileButton {
+		margin-right:38px;
+		right:0;
+		position:absolute;
+		bottom:0;
+		margin-bottom:8px;
+		width:35px;
+		height:35px;
+		}
+	#CAMPUStitle {
+		font-family:HelveticaNeue-Thin, Arial, sans-serif
+		
+		}
+		
+	#BCITtitle{
+		
+	}
 </style>
 </head>
 
 <body>
-<div class="header">
-		<p><b>BCIT |</b> Burnaby Campus</p>
+<div id="header">
+		<p id = "CAMPUStitle"> <b>BCIT |</b> BURNABY CAMPUS</p>
 	</div>
-    
-<img  id="PostFooter" src ="./imgs/Post_Footer.png"/>
+ <div id = "FooterDiv">   
+    <img  id="PostFooter" src ="./imgs/Post_Footer.png"/>
+    <img  id="MostPopularButton" src ="./imgs/Icon_MostPopular.png"/>
+    <img  id="PostButton" src ="./imgs/Icon_Post.png"/>
+    <img  id="UserProfileButton" src ="./imgs/Icon_UserProfile.png"/>
+</div>
 </body>
 </html>

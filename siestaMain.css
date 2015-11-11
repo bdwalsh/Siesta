@@ -29,10 +29,11 @@ select {
 }
 
 body{
+	overflow:hidden;
 	background-color: rgba(124,194,180,1.00);
 	width: 100vw;
 	height: 100vh;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif, Arial, sans-serif;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif, Arial, sans-serif;
 }
 
 .infoInput {
@@ -57,7 +58,7 @@ p.infoInput {
 	background-color: #14937d;
 }
 #header {
-	height: 25px;
+	height: 27px;
 	background-color: #14937f; 
 	text-align: center;
 	color: white;
