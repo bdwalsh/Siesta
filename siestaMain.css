@@ -72,10 +72,12 @@ p.infoInput {
 	background-color: #14937f; 
 	text-align: center;
 	color: white;
+	font-size: 12px;
 }
 
 button {
 	border: none;
+	font-size: 12px;
 }
 
 

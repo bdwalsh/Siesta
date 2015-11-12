@@ -12,9 +12,10 @@ body {
 }
 #content{
 	width:100%;
-	margin-left:-10px;
+	margin-left:-2px;
 	height:100vh;
 	position:relative;
+	margin-top: -15px;
 }
 #header {
 	height: 25px;
@@ -152,7 +153,6 @@ tr {
 }
 
 td {
-	height:95px;
 	
 }
 

@@ -52,6 +52,7 @@ window.onload = function(){
 /*insert the comments!*/	
 	//http://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_rowspan
 	var commentsTable = document.createElement("table");
+	commentsDiv.appendChild(commentsTable);
 	var tr1 = document.createElement("tr");
 	var tr2 = document.createElement("tr");
 	
@@ -69,4 +70,20 @@ window.onload = function(){
 	tr1.appendChild(td3);
 	
 	tr2.appendChild(td4);
+	
+	var profPic = document.createElement("img");
+	profPic.src = "./imgs/profpic.png";
+	profPic.style.width= "60px";
+	td1.appendChild(profPic);
+	td2.innerHTML = "Bill Jackson";
+	td3.innerHTML = "5 stars";
+	
+	td4.innerHTML = "Great spot for napping awesome cool wow sweet nice";
+	td4.setAttribute("colspan", "3");
+	td4.style.width = "60px";
+	
+	td2.style.width = "80%";
+	
+	td1.style.height= "30px";
+	
 };
