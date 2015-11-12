@@ -32,11 +32,16 @@ select {
 }
 
 body{
+	overflow:hidden;
 	background-color: rgba(124,194,180,1.00);
 	width: 100vw;
 	height: 100vh;
+<<<<<<< HEAD
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif, Arial, sans-serif;
 	margin: 0;
+=======
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif, Arial, sans-serif;
+>>>>>>> b5b8f4a390102a5ffd1746b72d4bf453c7033f77
 }
 
 .infoInput {
@@ -60,11 +65,16 @@ p.infoInput {
 	color:white;
 	background-color: #14937d;
 }
+<<<<<<< HEAD
 
 .header {
 	width: 100%;
 	height: 35px;
 	line-height: 35px;
+=======
+#header {
+	height: 27px;
+>>>>>>> b5b8f4a390102a5ffd1746b72d4bf453c7033f77
 	background-color: #14937f; 
 	text-align: center;
 	color: white;
