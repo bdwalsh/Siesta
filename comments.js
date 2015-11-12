@@ -51,6 +51,17 @@ window.onload = function(){
 	
 /*insert the comments!*/	
 	//http://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_rowspan
+	
+	var userPic = document.createElement("img");
+	
+	userPic.setAttribute("class", "pics");
+	
+	commentsDiv.appendChild(userPic);
+	
+	textArea = document.createElement("textarea");
+	commentsDiv.appendChild(textArea);
+	
+	//Create Table for comments
 	var commentsTable = document.createElement("table");
 	commentsDiv.appendChild(commentsTable);
 	var tr1 = document.createElement("tr");
