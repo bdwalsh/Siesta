@@ -5,8 +5,14 @@
 <title>Map</title>
 <link href="siestaMain.css" rel="stylesheet" type="text/css">
 <style>
+	#content{
+		position: relative;
+		margin-left:-7.1px;
+	}
 	#FooterDiv {
-		
+		position:absolute;
+		bottom:0;
+		z-index:1;
 	}
 	
 	#PostFooter {
@@ -15,6 +21,9 @@
 		bottom:0;
 		width:100vw;
 		height:75px;
+		z-index: 1;
+		margin-bottom:28px;
+		margin-left:-.5px;
 		}
 		
 	#MostPopularButton {
@@ -22,9 +31,10 @@
 		left:0;
 		position:absolute;
 		bottom:0;
-		margin-bottom:8px;
+		margin-bottom:35px;
 		width:35px;
 		height:35px;
+		z-index: 1;
 		}
 		
 	#PostButton {
@@ -33,9 +43,10 @@
 		left:50%;
 		margin-left:-29.5px;
 		bottom:0;
-		margin-bottom:8px;
+		margin-bottom:35px;
 		width:55px;
 		height:55px;
+		z-index: 1;
 		}
 		
 	#UserProfileButton {
@@ -43,30 +54,139 @@
 		right:0;
 		position:absolute;
 		bottom:0;
-		margin-bottom:8px;
+		margin-bottom:35px;
 		width:35px;
 		height:35px;
+		z-index: 1;
 		}
 	#CAMPUStitle {
 		font-family:HelveticaNeue-Thin, Arial, sans-serif
 		
 		}
 		
-	#BCITtitle{
+	 #mymap {
+        position:fixed;
+        top:0;
+        left:0;
+        width:100vw;
+        height:100vh;
 		
-	}
+        }
 </style>
 </head>
 
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+ 
+     <script>
+      /*  $(document).ready(function(){
+        
+            $.ajax({
+               url:"server.php"
+                data:{
+                    type:0 //when type is 0, I want a morning and afternoon response, but when type is 1, I want an evening response.
+                },
+                dataType:"json",
+                type:"post",
+                success: function(resp){
+                console.log(resp);
+                document.body.innerHTML = resp.morning + resp.afternoon;
+            
+                }
+            });
+        
+        window.onclick = function(evt){
+                console.log(evt);
+            }
+        }); */
+        
+        console.log(google);
+        function doStuffMap(){
+            //Google Maps has finished loading on my page
+            console.log(google);
+            var map = new google.maps.Map(document.getElementById("mymap"),
+                {
+                    center:{
+                        lat:49.25015,
+                        lng:-123.00195
+                    },
+                    zoom: 17
+                }
+            );
+            
+            map.addListener("click", function(evt){
+                console.log(evt);
+                
+                var new_mark = new google.maps.Marker({
+                   position:evt.latLng,
+                map: map,
+                icon: {
+                url:"./imgs/MarkerCloud.png",
+                size:{
+                    width:70,
+                    height:60,
+            },
+                scaledSize: {
+                width:70,
+                height:60
+                    }
+                }
+                    
+                });
+                
+                var new_info = new google.maps.InfoWindow({
+                    content:document.body.getElementById("MarkerImg")
+                });
+                
+            });
+            
+            var marker = new google.maps.Marker({
+                position:{
+                    lat:49.25015,
+                    lng:-123.00195
+              
+                },
+                map: map,
+                title: "My Marker",
+                icon: {
+                    url:"./imgs/MarkerCloud.png",
+                size:{
+                    width:140,
+                    height:120,
+            },
+                scaledSize: {
+                    width:140,
+                    height:120
+                    }
+                }
+            });
+            
+            var info = new google.maps.InfoWindow({
+                content: "<h1>Hey</h1>"
+            });
+            
+            info.open(map, marker);
+        }
+    </script>
+
 <body>
-<div id="header">
+<div id= "content">
+<div class="header">
 		<p id = "CAMPUStitle"> <b>BCIT |</b> BURNABY CAMPUS</p>
 	</div>
- <div id = "FooterDiv">   
+  
     <img  id="PostFooter" src ="./imgs/Post_Footer.png"/>
-    <img  id="MostPopularButton" src ="./imgs/Icon_MostPopular.png"/>
+  	<img  id="MostPopularButton" src ="./imgs/Icon_MostPopular.png"/>
     <img  id="PostButton" src ="./imgs/Icon_Post.png"/>
     <img  id="UserProfileButton" src ="./imgs/Icon_UserProfile.png"/>
+
+  
+<div id="mymap"></div>
 </div>
+
+<img  id="MarkerImg" src ="./imgs/MarkerCloud.png"/>
 </body>
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=doStuffMap"
+        async defer></script>
+
 </html>
