@@ -32,12 +32,22 @@ body {
 
 }
 
+
 #imgContainer{
 	margin-left: 1.5px;
 	height: 40vh;
 	position: relative;
 }
-
+@media only screen and (min-width: 700px) {
+    #imgContainer {
+       height: 50vh;
+    }
+}
+@media only screen and (min-width: 700px) {
+    #locImg {
+       height:50vh;
+    }
+}
 #rating {
 	position: absolute;
 	top:0;
@@ -119,10 +129,11 @@ body {
 
 /*comments and buttons*/
 #commentInput {
-	width:70%;
+	width:90%;
 	height: 45px; 
-	margin-left: 5px;
+	margin-left: 60px;
 	margin-top: -4px;
+	position: absolute;
 }
 .buttons{
 	width:100%;
@@ -154,6 +165,42 @@ tr {
 
 td {
 	
+}
+
+/*Rating buttons*/
+.rating {
+    float:left;
+    width:300px;
+    margin-left: 150px;
+    margin-top: 50px;
+    position: absolute;
+    right: 0;
+}
+.rating span { float:right; position:relative; }
+.rating span input {
+    position:absolute;
+    top:0px;
+    left:0px;
+    opacity:0;
+}
+.rating span label {
+    display:inline-block;
+    width:20px;
+    height:20px;
+    text-align:center;
+    color:#FFF;
+    background:#ccc;
+    font-size:30px;
+    margin-right:2px;
+    line-height:30px;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+}
+
+.rating span.checked label,
+.rating span.checked ~ span label {
+    background:#14937f;
+    color:#FFF;
 }
 
 
