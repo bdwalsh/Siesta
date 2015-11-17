@@ -1,14 +1,11 @@
-<!doctype html>
+<<!doctype html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Map</title>
 <link href="siestaMain.css" rel="stylesheet" type="text/css">
 <style>
-	#content{
-		position: relative;
-		margin-left:-7.1px;
-	}
+
 	#FooterDiv {
 		position:absolute;
 		bottom:0;
@@ -72,6 +69,14 @@
         height:100vh;
 		
         }
+		
+	#clickHere {
+	    position:absolute;	
+		margin-left:20px;
+		color:white;
+		background-color: black;
+		fon
+	}
 </style>
 </head>
 
@@ -99,7 +104,7 @@
             }
         }); */
         
-        console.log(google);
+       
         function doStuffMap(){
             //Google Maps has finished loading on my page
             console.log(google);
@@ -113,7 +118,72 @@
                 }
             );
             
-            map.addListener("click", function(evt){
+//--------------Hardcoded markers for testing            
+        var marker1 = new google.maps.Marker({
+                position:{
+                    lat:49.25015,
+                    lng:-123.00195
+                },
+                map: map,
+                title: "My Marker",
+                icon: {
+                    url:"./imgs/MarkerCloud.png",
+                size:{
+                    width:140,
+                    height:120,
+                },
+                scaledSize: {
+                    width:80,
+                    height:80
+                    }
+                }
+            });
+            
+            
+            var gotoInfo = function() {
+                
+                
+                
+            }
+            
+            marker1.addListener("click", function(evt){
+            //window.location.replace("locationInfo.html");     
+             var new_info = new google.maps.InfoWindow({
+                /*content: "<div id= 'clickHere'>Click image for more info</div><img src='./imgs/sample.jpg' width='200' height='200'>",*/
+				content: "",
+                position: evt.latLng,
+                maxWidth: 500,
+                maxHeight: 500
+				
+            });
+			var img = document.createElement("img");
+			var infoDiv = document.createElement("div");
+			var rightHere = document.createElement("div");
+			rightHere.innerHTML = "Click on the Image for more info";
+			infoDiv.appendChild(img);
+			infoDiv.appendChild(rightHere); 
+            img.src = "./imgs/sample.jpg";
+			img.style.width = "200px";
+			img.style.height = "200px";
+			new_info.setContent(infoDiv);
+			map.addListener("click", function(evt){
+			new_info.close(); 	
+				
+			});   
+            
+			new_info.open(marker1.get('map'), marker1);
+			
+			var clickHere = document.getElementById("clickHere");
+			img.onclick = function() {
+			console.log("works");
+			window.location.replace("locationInfo.html");	
+			}   
+            });
+                                
+     		
+//------------------------------------------------- 
+            
+           /* map.addListener("click", function(evt){
                 console.log(evt);
                 
                 var new_mark = new google.maps.Marker({
@@ -137,34 +207,14 @@
                     content:document.body.getElementById("MarkerImg")
                 });
                 
-            });
+            });*/
             
-          /*  var marker = new google.maps.Marker({
-                position:{
-                    lat:49.25015,
-                    lng:-123.00195
-              
-                },
-                map: map,
-                title: "My Marker",
-                icon: {
-                    url:"./imgs/MarkerCloud.png",
-                size:{
-                    width:140,
-                    height:120,
-            },
-                scaledSize: {
-                    width:140,
-                    height:120
-                    }
-                }
-            }); */
-            
+       
            /* var info = new google.maps.InfoWindow({
                 content: "<h1>Hey</h1>"
             });*/
             
-            info.open(map, marker);
+            //info.open(map, marker);
         }
     </script>
 
@@ -178,6 +228,12 @@
   	<img  id="MostPopularButton" src ="./imgs/Icon_MostPopular.png"/>
     <img  id="PostButton" src ="./imgs/Icon_Post.png"/>
     <img  id="UserProfileButton" src ="./imgs/Icon_UserProfile.png"/>
+    <script>
+    var list = document.getElementById('MostPopularButton');
+    list.onclick = function(){
+    window.location.replace("locationList.html");
+    }
+    </script>
 
   
 <div id="mymap"></div>
