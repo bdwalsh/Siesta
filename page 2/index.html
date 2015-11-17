@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>site - Demo</title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+    
+<script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="top_span">
+  <b>POST</b> NAP LOCATION
+
+</div>
+<form enctype="multipart/form-data">
+<div class="normal_banner">Title</div>
+<div class="title_section"><input type="text" placeholder='ex. "Study Tables"'/></div>
+<div class="normal_banner">Description</div>
+<div class="description_section"><textarea>ex "Cool spot! Peaceful. delightful and Wonderful. 10/10."</textarea></div>
+<div class="normal_banner">Image</div>
+<div class="image_section"><img src="images/backpic.png" id="image" width="100%"/>
+	<input class="image-file-chosen"  type="hidden" />
+	<input class="btn image-file-button" />
+	<input class="image-file hide" type="file" name="image"/> 
+</div>
+<input type="submit" value="Post"/>
+</form>
+</body>
+<script>
+$( document ).ready(function() {
+    $('.image-file-button').each(function() {
+      $(this).off('click').on('click', function() {
+           $(this).siblings('.image-file').trigger('click');
+      });
+});
+$('.image-file').each(function() {
+      $(this).change(function () {
+           $(this).siblings('.image-file-chosen').val(this.files[0].name);
+	      var tmppath = URL.createObjectURL(event.target.files[0]);
+		$("#image").fadeIn("fast").attr('src',tmppath);
+
+
+      });
+});
+});
+
+</script>
+</html>
