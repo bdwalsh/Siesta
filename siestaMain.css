@@ -55,6 +55,12 @@ p.infoInput {
 	line-height: 48px;
 }
 
+.backButton{
+	position:absolute;
+	width:40px;
+	height: 30px;
+	margin-left: -400px;
+}
 
 .buttonOne{
 	margin-top: 20px;
