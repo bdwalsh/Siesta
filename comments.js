@@ -109,12 +109,16 @@ window.onload = function(){
 		
 		tr2.appendChild(td4);
 		
+		var rating = $('rating').value;
+		console.log(rating);
 		var profPic = document.createElement("img");
 		profPic.src = "./imgs/profpic.png";
 		profPic.style.width= "60px";
 		td1.appendChild(profPic);
 		td2.innerHTML = "Your Name";
-		td3.innerHTML = "5 stars";
+
+
+		td3.innerHTML = Rating + " out of 5";
 		
 		td4.innerHTML = commValue1;
 		td4.setAttribute("colspan", "3");
@@ -123,6 +127,8 @@ window.onload = function(){
 		td2.style.width = "80%";
 		
 		td1.style.height= "30px";
+
+
 	}
 
 	//rating buttons
@@ -134,7 +140,7 @@ window.onload = function(){
 
     $('input:radio').change(
     function(){
-        var Rating = this.value;
+        Rating = this.value;
     }); 
 	
 };
