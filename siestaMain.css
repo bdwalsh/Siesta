@@ -44,7 +44,12 @@ body{
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif, Arial, sans-serif;
 	margin: 0;
 
+}
 
+#GradientDiv {
+	top:0;
+	background-image: url("./imgs/LogInBackgroundGradient.jpg");
+	
 }
 
 .infoInput {
@@ -53,7 +58,7 @@ body{
 	margin-right: auto;
 	width: 265px;
 	height: 48px;
-	margin-top: 20px;
+	margin-top: 3px;
 }
 
 p.infoInput {
