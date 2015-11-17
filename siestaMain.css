@@ -10,6 +10,11 @@
 	height: 1px;
 }
 
+#SiestaLogo {
+	height: 50px;
+	width: 80px;
+}
+
 select {
    -webkit-appearance: none;
    -moz-appearance: none;
