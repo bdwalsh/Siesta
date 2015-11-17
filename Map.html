@@ -1,4 +1,4 @@
-<<!doctype html>
+<!doctype html>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -6,9 +6,14 @@
 <link href="siestaMain.css" rel="stylesheet" type="text/css">
 <style>
 
-	#FooterDiv {
+	#MapHeader {
 		position:absolute;
-		bottom:0;
+		top:0;
+		z-index:1;
+	}
+	
+	#FooterDiv {
+		position:absolute;		bottom:0;
 		z-index:1;
 	}
 	
@@ -19,7 +24,7 @@
 		width:100vw;
 		height:75px;
 		z-index: 1;
-		margin-bottom:28px;
+		margin-bottom:0px;
 		margin-left:-.5px;
 		}
 		
@@ -28,7 +33,7 @@
 		left:0;
 		position:absolute;
 		bottom:0;
-		margin-bottom:35px;
+		margin-bottom:8px;
 		width:35px;
 		height:35px;
 		z-index: 1;
@@ -40,7 +45,7 @@
 		left:50%;
 		margin-left:-30px;
 		bottom:0;
-		margin-bottom:35px;
+		margin-bottom:8px;
 		width:60px;
 		height:60px;
 		z-index: 1;
@@ -51,7 +56,7 @@
 		right:0;
 		position:absolute;
 		bottom:0;
-		margin-bottom:35px;
+		margin-bottom:8px;
 		width:35px;
 		height:35px;
 		z-index: 1;
@@ -80,7 +85,7 @@
 </style>
 </head>
 
- <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
  
      <script>
       /*  $(document).ready(function(){
@@ -133,7 +138,7 @@
                     height:120,
                 },
                 scaledSize: {
-                    width:80,
+                    width:90,
                     height:80
                     }
                 }
@@ -220,7 +225,7 @@
 
 <body>
 <div id= "content">
-<div class="header">
+<div class="header" div id="MapHeader">
 		<p id = "CAMPUStitle"> <b>BCIT |</b> BURNABY CAMPUS</p>
 	</div>
   
