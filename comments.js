@@ -58,7 +58,7 @@ window.onload = function(){
 	//http://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_rowspan
 	
 	var userPic = document.createElement("img");
-	
+	userPic.src = "./imgs/profpic.png"
 	userPic.setAttribute("class", "pics");
 	userPic.style.marginTop="10px";
 	userPic.style.marginLeft="5px";
@@ -71,7 +71,8 @@ window.onload = function(){
 
 	postBut2 = document.createElement("button");
 	postBut2.innerHTML = "Post Comment";
-	postBut2.style.marginLeft = "55px";
+	//postBut2.style.marginLeft = "55px";
+	postBut2.id = "postBut2";
 	commentsDiv.appendChild(postBut2);
 
 	
@@ -89,7 +90,7 @@ window.onload = function(){
 	var addComment = function(commValue1) {
 		
 		var commentsTable = document.createElement("table");
-		commentsTable.style.border = "1px solid";
+	
 		commentsDiv.appendChild(commentsTable);
 		var tr1 = document.createElement("tr");
 		var tr2 = document.createElement("tr");
@@ -115,16 +116,17 @@ window.onload = function(){
 		profPic.src = "./imgs/profpic.png";
 		profPic.style.width= "60px";
 		td1.appendChild(profPic);
+		td1.style.width= "70px";
 		td2.innerHTML = "Your Name";
 
-
-		
+		td3.style.width = "100px";
+	
 		
 		td4.innerHTML = commValue1;
 		td4.setAttribute("colspan", "3");
 		td4.style.width = "60px";
 		
-		td2.style.width = "80%";
+		td2.style.marginLeft = "-500px";
 		
 		td1.style.height= "30px";
 		td3.innerHTML = Rating + " out of 5";

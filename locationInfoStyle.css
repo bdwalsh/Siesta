@@ -163,8 +163,18 @@ tr {
 	width:100%;	
 }
 
-td {
-	
+tr:nth-child(odd) td {
+	background-color: #cae3df;
+}
+
+
+tr:nth-child(even) td {
+	background-color: #e7f0ef;
+}
+
+table{
+width: 100%;
+
 }
 
 /*Rating buttons*/
@@ -209,5 +219,12 @@ td {
 	margin-right: 120px;
 }
 
+#postBut2{
+   margin-left: 55px;
 
-
+}
+@media only screen and (min-width: 380px) {
+    #postBut2 {
+       margin-left: 10px;
+       margin-bottom: 20px;
+}
