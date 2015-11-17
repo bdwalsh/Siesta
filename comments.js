@@ -118,7 +118,7 @@ window.onload = function(){
 		td2.innerHTML = "Your Name";
 
 
-		td3.innerHTML = Rating + " out of 5";
+		
 		
 		td4.innerHTML = commValue1;
 		td4.setAttribute("colspan", "3");
@@ -127,7 +127,7 @@ window.onload = function(){
 		td2.style.width = "80%";
 		
 		td1.style.height= "30px";
-
+		td3.innerHTML = Rating + " out of 5";
 
 	}
 
